@@ -14,10 +14,10 @@ const DrawerLayout = () => (
       }}
     />
     <Drawer.Screen
-      name="(tabs)"
+      name="(dashboard)"
       options={{
-        headerTitle: 'Tabs',
-        drawerLabel: 'Tabs',
+        headerTitle: 'Dashboard',
+        drawerLabel: 'Dashboard',
         drawerIcon: ({ size, color }) => (
           <MaterialIcons name="border-bottom" size={size} color={color} />
         ),

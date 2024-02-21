@@ -2,12 +2,12 @@ import { Text, View } from 'react-native';
 
 import EditScreenInfo from '../../../components/edit-screen-info';
 
-export default function TabTwoScreen() {
+export default function TabCreateScreen() {
   return (
     <View className={styles.container}>
-      <Text className={styles.title}>Tab Two</Text>
+      <Text className={styles.title}>Criar sala</Text>
       <View className={styles.separator} />
-      <EditScreenInfo path="app/(drawer)/(tabs)/two.tsx" />
+      <EditScreenInfo path="app/(drawer)/(dashboard)/create.tsx" />
     </View>
   );
 }
