@@ -12,9 +12,9 @@ cssInterop(Octicons, {
 
 function TabBarIcon<T extends React.ComponentType<any>>(Icon: T & { focused?: boolean }) {
   return function (props: React.ComponentProps<T> & { focused: boolean }) {
-    const teste = { ...props } as React.ComponentProps<T>;
+    const newProps = { ...props } as React.ComponentProps<T>;
     const className = `mb-[-5]  ${props.className} ${props.focused && 'text-primary-500 fill-primary-500'}`;
-    const NewIcon = cloneElement(<Icon {...teste} />, { size: 24, className });
+    const NewIcon = cloneElement(<Icon {...newProps} />, { size: 24, className });
     return NewIcon;
   };
 }
