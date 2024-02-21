@@ -36,7 +36,9 @@ const MenuItem = ({
       className={`items-center justify-center h-full border-t-2 pt-[16] ${focused ? 'border-primary-500' : 'border-white'}`}>
       {children}
 
-      <Text className="mt-1 text-sm">{title}</Text>
+      <Text className={`mt-1 text-sm  ${focused ? 'font-bold text-primary-500' : ''}`}>
+        {title}
+      </Text>
     </View>
   );
 };
@@ -108,7 +110,7 @@ export default function DashboardLayout() {
           title: '',
           tabBarIcon: ({ focused }) => (
             <MenuItem focused={focused} title="Criar">
-              <TabBarIconAwesome name="plus-square-o" focused={focused} />
+              <TabBarIconOcticons name="diff-added" focused={focused} />
             </MenuItem>
           ),
         }}
