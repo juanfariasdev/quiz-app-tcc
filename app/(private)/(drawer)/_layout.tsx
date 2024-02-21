@@ -14,7 +14,7 @@ const DrawerLayout = () => (
       }}
     />
     <Drawer.Screen
-      name="(dashboard)"
+      name="dashboard/(menu)"
       options={{
         headerTitle: 'Dashboard',
         drawerLabel: 'Dashboard',

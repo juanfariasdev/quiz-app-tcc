@@ -1,20 +1,22 @@
 import '../global.css';
 
-import { Stack } from 'expo-router';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Redirect, Stack } from 'expo-router';
 
-export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(drawer)',
-};
+export default function AppLayout() {
+  // const { session, isLoading } = useSession();
 
-export default function RootLayout() {
-  return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Stack>
-        <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ title: 'Modal', presentation: 'modal' }} />
-      </Stack>
-    </GestureHandlerRootView>
-  );
+  // // You can keep the splash screen open, or render a loading screen like we do here.
+  // if (isLoading) {
+  //   return <Text>Loading...</Text>;
+  // }
+
+  // // Only require authentication within the (app) group's layout as users
+  // // need to be able to access the (auth) group and sign in again.
+  // if (!session) {
+  //   // On web, static rendering will stop here as the user is not authenticated
+  //   // in the headless Node process that the pages are rendered in.
+  //   return <Redirect href="/sign-in" />;
+  // }
+
+  return <Stack screenOptions={{ headerShown: false }} />;
 }

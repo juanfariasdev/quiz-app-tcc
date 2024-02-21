@@ -1,13 +1,12 @@
 import { Text, View } from 'react-native';
 
-import EditScreenInfo from '../../../components/edit-screen-info';
-
-export default function TabJoinScreen() {
+import EditScreenInfo from '../../../../../components/edit-screen-info';
+export default function TabProfileScreen() {
   return (
     <View className={styles.container}>
-      <Text className={styles.title}>Jogar</Text>
+      <Text className={styles.title}>Perfil</Text>
       <View className={styles.separator} />
-      <EditScreenInfo path="app/(drawer)/(dashboard)/join.tsx" />
+      <EditScreenInfo path="app/(drawer)/(dashboard)/profile.tsx" />
     </View>
   );
 }

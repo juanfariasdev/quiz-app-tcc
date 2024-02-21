@@ -1,13 +1,13 @@
 import { Text, View } from 'react-native';
 
-import EditScreenInfo from '../../../components/edit-screen-info';
+import EditScreenInfo from '../../../../../components/edit-screen-info';
 
-export default function TabHomeScreen() {
+export default function TabClassesScreen() {
   return (
     <View className={styles.container}>
-      <Text className={styles.title}>Home</Text>
+      <Text className={styles.title}>Aulas</Text>
       <View className={styles.separator} />
-      <EditScreenInfo path="app/(drawer)/(dashboard)/home.tsx" />
+      <EditScreenInfo path="app/(drawer)/(dashboard)/classes.tsx" />
     </View>
   );
 }
