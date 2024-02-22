@@ -1,6 +1,8 @@
 import { router } from 'expo-router';
 import { Image, Text, View, TouchableOpacity } from 'react-native';
 
+import { Button } from '~/components/button';
+
 const WelcomePage = () => {
   return (
     <View className="h-full justify-center px-3">
@@ -14,24 +16,24 @@ const WelcomePage = () => {
         </Text>
       </View>
       <View className="gap-3 mb-4">
-        <TouchableOpacity
-          className="bg-primary-500 px-4 py-4 items-center rounded-full border-2 border-t-0 border-primary-700"
+        <Button
+          layout="default"
+          title="Logar"
           onPress={() => {
             // Navigate after signing in. You may want to tweak this to ensure sign-in is
             // successful before navigating.
             router.replace('/login');
-          }}>
-          <Text className="text-white text-xl uppercase">Logar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          className="bg-primary-100 px-4 py-4 items-center rounded-full border-2 border-t-0 border-primary-300"
+          }}
+        />
+        <Button
+          layout="light"
+          title="Cadastrar"
           onPress={() => {
             // Navigate after signing in. You may want to tweak this to ensure sign-in is
             // successful before navigating.
-            // router.replace('/dashboard');
-          }}>
-          <Text className="text-primary-500 text-xl uppercase">Cadastrar</Text>
-        </TouchableOpacity>
+            router.replace('/login');
+          }}
+        />
       </View>
     </View>
   );
