@@ -8,10 +8,17 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Stack>
-        <Stack.Screen name="login" options={{ headerShown: false, presentation: 'modal' }} />
-        <Stack.Screen name="welcome" options={{ title: 'Bem-vindo', presentation: 'modal' }} />
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: '#fff' }}>
+      <Stack
+        screenOptions={{
+          contentStyle: { backgroundColor: '#fff' },
+          headerShadowVisible: false,
+        }}>
+        <Stack.Screen name="login" options={{ title: '', presentation: 'modal' }} />
+        <Stack.Screen
+          name="index"
+          options={{ headerShown: false, title: 'Bem-vindo', presentation: 'modal' }}
+        />
       </Stack>
     </GestureHandlerRootView>
   );

@@ -5,7 +5,7 @@ import { Button } from '~/components/button';
 
 const WelcomePage = () => {
   return (
-    <View className="h-full justify-center px-3">
+    <View className="h-full justify-center px-6">
       <View className="flex-1 justify-center w-full items-center py-8">
         <Image
           source={require('../../assets/6211884.png')}
@@ -22,7 +22,7 @@ const WelcomePage = () => {
           onPress={() => {
             // Navigate after signing in. You may want to tweak this to ensure sign-in is
             // successful before navigating.
-            router.replace('/login');
+            router.navigate('/login');
           }}
         />
         <Button
@@ -31,7 +31,7 @@ const WelcomePage = () => {
           onPress={() => {
             // Navigate after signing in. You may want to tweak this to ensure sign-in is
             // successful before navigating.
-            router.replace('/login');
+            router.replace('/dashboard');
           }}
         />
       </View>

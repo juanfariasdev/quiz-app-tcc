@@ -6,14 +6,6 @@ import { Pressable, StyleSheet } from 'react-native';
 const DrawerLayout = () => (
   <Drawer>
     <Drawer.Screen
-      name="index"
-      options={{
-        headerTitle: 'Home',
-        drawerLabel: 'Home',
-        drawerIcon: ({ size, color }) => <Ionicons name="home-outline" size={size} color={color} />,
-      }}
-    />
-    <Drawer.Screen
       name="dashboard/(menu)"
       options={{
         headerTitle: 'Dashboard',
