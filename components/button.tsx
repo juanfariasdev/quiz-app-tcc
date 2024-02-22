@@ -10,7 +10,7 @@ function setLayout(option: string) {
   let text;
   switch (option) {
     case 'light':
-      background = 'bg-primary-300 border-2 border-t-0 border-primary-300';
+      background = 'bg-primary-100 border-2 border-t-0 border-primary-300';
       text = 'text-primary-500';
       break;
     case 'default':
